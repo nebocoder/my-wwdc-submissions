@@ -4,53 +4,26 @@ const charCountDisplay = document.getElementById("charCount")
 const longestWordDisplay = document.getElementById("longestWord")
 const btnClear = document.getElementById("btnClear")
 
-let wordCount = 0
-let charCount = 0
 let longestWord = ""
-let longestWordLength = 0
 
-textArea.addEventListener("keyup", wordCounter)
-textArea.addEventListener("keyup", charCounter)
-textArea.addEventListener("keyup", longestWordTracker)
-btnClear.addEventListener("click", clearText)
+textArea.addEventListener("input", counter)
+btnClear.addEventListener("click", clear)
 
-function wordCounter() {
-  if (textArea.value.match(/[a-zA-Z]/g)) {
-    let count = textArea.value.match(/\S+/g).length
-    wordCountDisplay.textContent = count
-  } else {
-    wordCountDisplay.textContent = 0
-  }
-}
-
-function charCounter() {
-  if (textArea.value.match(/[a-zA-Z]/g)) {
-    let count = textArea.value.match(/[a-zA-Z]/g).length
-    charCountDisplay.textContent = count
-  } else {
-    charCountDisplay.textContent = 0
-  }
-}
-
-function longestWordTracker() {
+function counter() {
   if (textArea.value.match(/[a-zA-Z]/g)) {
     let array = textArea.value.match(/\S+/g)
-    for (let i = 0; i < array.length; i++) {
-      if (array[i].length > longestWordLength) {
-        longestWordLength = array[i].length
-        longestWord = array[i].toLowerCase().replace(/[^a-zA-Z]/g, "")
-      }
-    }
-
-    longestWordDisplay.textContent = `${longestWord} (${longestWordLength})`
+    // Setting number of words and characters
+    wordCountDisplay.textContent = array.length
+    charCountDisplay.textContent = textArea.value.match(/[a-zA-Z]/g).length
+    // Setting the longest word
+    longestWord = array.reduce((a, b) => (a.length < b.length ? b : a), "")
+    longestWordDisplay.textContent = `${longestWord} (${longestWord.length})`
   } else {
-    longestWord = ""
-    longestWordLength = 0
-    longestWordDisplay.textContent = ""
+    clear()
   }
 }
 
-function clearText() {
+function clear() {
   textArea.value = ""
   wordCountDisplay.textContent = 0
   charCountDisplay.textContent = 0
