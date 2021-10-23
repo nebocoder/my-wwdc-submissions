@@ -16,8 +16,17 @@ function counter() {
     wordCountDisplay.textContent = array.length
     charCountDisplay.textContent = textArea.value.match(/[a-zA-Z]/g).length
     // Setting the longest word
-    longestWord = array.reduce((a, b) => (a.length < b.length ? b : a), "")
-    longestWordDisplay.textContent = `${longestWord} (${longestWord.length})`
+    longestWord = array
+      .reduce(
+        (a, b) =>
+          a.replace(/\W/g, "").length < b.replace(/\W/g, "").length ? b : a,
+        ""
+      )
+      .replace(/\W/g, "")
+
+    longestWordDisplay.textContent = `${longestWord.toLowerCase()} (${
+      longestWord.length
+    })`
   } else {
     clear()
   }
