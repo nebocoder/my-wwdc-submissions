@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gradient Generator</title>
+  </head>
+  <body>
+    <form id="gradient" class="gradient">
+      <div>
+        <label for="color1">Color 1:</label>
+        <input type="color" id="color1" name="color1" value="#ff8afb" />
+      </div>
+      <div>
+        <label for="color2">Color 2:</label>
+        <input type="color" id="color2" name="color2" value="#fdd861" />
+      </div>
+      <div>
+        <label for="split">Split:</label>
+        <input
+          type="range"
+          name="split"
+          id="split"
+          min="0"
+          max="100"
+          value="50"
+        />
+      </div>
+      <button id="randomize">Randomize</button>
+    </form>
+  </body>
+  <script src="index.js"></script>
+</html>
