@@ -8,21 +8,20 @@ body {
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   height: 100vh;
 }
 
 .gradient {
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
-  background-color: #b5caf9;
-  padding: 2.5em;
-  border-radius: 2rem 2rem 0 0;
+  background-color: #f0f1df;
+  padding: 2rem 2.5em;
+  border-radius: 2rem;
   min-width: 50%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   text-align: center;
-  gap: 1rem;
 }
 
 input,
@@ -41,5 +40,6 @@ input[type="color"] {
 
 button {
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
+  border: 2px solid black;
 }
