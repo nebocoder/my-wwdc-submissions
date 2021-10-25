@@ -5,21 +5,31 @@ const gradient = document.getElementById("gradient")
 const body = document.querySelector("body")
 const randomizeBtn = document.getElementById("randomize")
 
-generate()
+randomize()
 
-function generate() {
-  body.style.background = `linear-gradient(90deg, ${color1.value}, ${split.value}%, ${color2.value})`
+function generate(valueOne, valueTwo, split) {
+  body.style.background = `linear-gradient(90deg, ${valueOne}, ${split}%, ${valueTwo})`
 }
 
 function randomize() {
-  let randomValue1 = "#" + Math.floor(Math.random() * 16777215).toString(16)
-  let randomValue2 = "#" + Math.floor(Math.random() * 16777215).toString(16)
+  const randomValueOne = randomColor()
+  const randomValueTwo = randomColor()
 
-  body.style.background = `linear-gradient(90deg, ${randomValue1}, ${split.value}%, ${randomValue2})`
+  console.log(randomValueOne, randomValueTwo)
+  generate(randomValueOne, randomValueTwo, 50)
 }
 
-color1.addEventListener("input", generate)
-color2.addEventListener("input", generate)
-split.addEventListener("input", generate)
+color1.addEventListener(
+  "input",
+  generate(color1.value, color2.value, split.value)
+)
+color2.addEventListener(
+  "input",
+  generate(color1.value, color2.value, split.value)
+)
+split.addEventListener(
+  "input",
+  generate(color1.value, color2.value, split.value)
+)
 
 randomizeBtn.addEventListener("click", randomize)
