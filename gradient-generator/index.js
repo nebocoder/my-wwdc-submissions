@@ -7,29 +7,19 @@ const randomizeBtn = document.getElementById("randomize")
 
 randomize()
 
-function generate(valueOne, valueTwo, split) {
-  body.style.background = `linear-gradient(90deg, ${valueOne}, ${split}%, ${valueTwo})`
+function generate() {
+  body.style.background = `linear-gradient(90deg, ${color1.value}, ${split.value}%, ${color2.value})`
 }
 
 function randomize() {
-  const randomValueOne = randomColor()
-  const randomValueTwo = randomColor()
+  color1.value = randomColor()
+  color2.value = randomColor()
 
-  console.log(randomValueOne, randomValueTwo)
-  generate(randomValueOne, randomValueTwo, 50)
+  generate()
 }
 
-color1.addEventListener(
-  "input",
-  generate(color1.value, color2.value, split.value)
-)
-color2.addEventListener(
-  "input",
-  generate(color1.value, color2.value, split.value)
-)
-split.addEventListener(
-  "input",
-  generate(color1.value, color2.value, split.value)
-)
+color1.addEventListener("input", generate)
+color2.addEventListener("input", generate)
+split.addEventListener("input", generate)
 
 randomizeBtn.addEventListener("click", randomize)
