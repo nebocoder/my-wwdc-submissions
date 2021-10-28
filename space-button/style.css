@@ -6,6 +6,7 @@
 }
 
 body {
+  margin: 0;
   font-family: "Bellefair", serif;
   min-height: 100vh;
   display: grid;
