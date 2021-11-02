@@ -1,7 +1,7 @@
 :root {
   --space-dark: hsl(230 35% 7%);
   --space-light: hsl(230 10% 95%);
-  --border-dark: hsl(230 10% 80%);
+  --border-dark: hsl(230 10% 85%);
   --border-light: hsl(230 10% 15%);
 }
 
@@ -13,11 +13,23 @@ body {
   place-content: center;
 }
 
+p {
+  text-align: center;
+  width: 90%;
+  font-size: 1.3rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2rem;
+}
+
 .dark {
+  color: var(--space-light);
   background: var(--space-dark);
 }
 
 .light {
+  color: var(--space-dark);
   background: var(--space-light);
 }
 
