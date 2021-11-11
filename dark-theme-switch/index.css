@@ -9,6 +9,17 @@
   --highlight: #006989;
 }
 
+/* Utilities */
+.light-theme {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.dark-theme {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
 html,
 body {
   margin: 0;
@@ -21,10 +32,10 @@ body {
 }
 
 .header {
-  background-color: var(--light);
   padding: 2em;
   width: 100%;
   display: flex;
+  transition: all 250ms;
 }
 
 .post-container {
@@ -40,14 +51,13 @@ img {
 }
 
 .post {
-  background: var(--light);
   padding: 1em;
   display: grid;
   grid-template-columns: 1fr minmax(50px, 250px);
   min-width: 400px;
   max-width: 700px;
   margin: 2em auto;
-  color: var(--dark);
+  transition: all 250ms;
 }
 
 .content {
@@ -62,7 +72,6 @@ img {
 }
 
 h1 {
-  color: var(--dark);
   margin: 0;
   font-size: 3rem;
 }
@@ -79,8 +88,6 @@ button {
   padding: 1em 2em;
   font-weight: 700;
   justify-self: start;
-  background-color: var(--dark);
-  color: var(--light);
 }
 
 .toggle {
