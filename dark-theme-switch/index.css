@@ -35,7 +35,7 @@ body {
   padding: 2em;
   width: 100%;
   display: flex;
-  transition: all 250ms;
+  transition: all 0.5s;
 }
 
 .post-container {
@@ -57,7 +57,7 @@ img {
   min-width: 400px;
   max-width: 700px;
   margin: 2em auto;
-  transition: all 250ms;
+  transition: all 0.5s;
 }
 
 .content {
@@ -88,6 +88,7 @@ button {
   padding: 1em 2em;
   font-weight: 700;
   justify-self: start;
+  transition: all 0.5s;
 }
 
 .toggle {
