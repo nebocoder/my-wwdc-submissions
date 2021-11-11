@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --light: whitesmoke;
+  --dark: #080808;
+  --highlight: #31aa3b;
+}
+
+/* Utilities */
+.light-theme {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.dark-theme {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+  background: var(--highlight);
+}
+
+.header {
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  transition: all 0.5s;
+}
+
+.post-container {
+  padding: 1em 2em;
+}
+
+.post,
+button,
+img {
+  -webkit-box-shadow: 2px 2px 4px 0px var(--dark);
+  box-shadow: 2px 2px 4px 0px var(--dark);
+  border-radius: 5px;
+}
+
+.post {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr minmax(50px, 250px);
+  min-width: 400px;
+  max-width: 700px;
+  margin: 2em auto;
+  transition: all 0.5s;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 20px 1fr;
+  padding: 0 1em 0 0;
+}
+
+img {
+  width: 100%;
+  max-height: 300px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  padding: 1em 2em;
+  font-weight: 700;
+  justify-self: start;
+  transition: all 0.5s;
+}
+
+.toggle {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  margin-left: auto;
+  background-color: var(--highlight);
+}
+
+label {
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  margin: 1em;
+  background-color: var(--highlight);
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  top: 2px;
+  left: 22px;
+  transition: 0.5s;
+  background-color: var(--light);
+}
+
+.toggle:checked + label::after {
+  transform: translate(-18px);
+  background-color: var(--dark);
+}
+
+.dark,
+.dark > h1,
+.dark .toggle::after {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.dark button {
+  background-color: var(--light);
+  color: var(--dark);
+}
