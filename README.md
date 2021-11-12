@@ -6,3 +6,5 @@ Latest challenge is on top.
 - 🌓 [Dark & Light Theme](https://scrimba.com/scrim/coef54215951afaa8521be8d8)
 - 🌌 [Space Button](https://scrimba.com/scrim/coe1a48689f7b166f7b7ff23d)
 - 💬 [Word Counter](https://scrimba.com/scrim/co6c3400385a7cd711b7a59bd)
+- 🎨 [Gradient Generator](https://scrimba.com/scrim/co1e542268b69225eaeca0783)
+- 
