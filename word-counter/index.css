@@ -33,7 +33,7 @@ button:hover {
 
 .container {
   background-color: #00c59e;
-  background: url("bg.jpg") no-repeat center/cover;
+  background: url("img/bg.jpg") no-repeat center/cover;
   color: #0b3a40;
   height: 100vh;
   display: flex;
