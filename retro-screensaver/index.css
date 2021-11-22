@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 2em;
+}
+
+.screensaver {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+.orb {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  background: #c7b9ff;
+  background: linear-gradient(
+    -45deg,
+    #aad1b6,
+    #b5caf9,
+    #c7b9ff,
+    #f0b9dd,
+    #f3bf99,
+    #fffad1
+  );
+  background-size: 300% 1500%;
+  animation: moveGradient 10s ease infinite;
+}
