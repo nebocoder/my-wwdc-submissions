@@ -40,3 +40,12 @@ body {
   background-size: 300% 1500%;
   animation: moveGradient 10s ease infinite;
 }
+
+@keyframes moveGradient {
+  0% {
+    background-position: top left;
+  }
+  50% {
+    background-position: right bottom;
+  }
+}
