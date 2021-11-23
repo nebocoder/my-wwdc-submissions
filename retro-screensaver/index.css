@@ -5,7 +5,32 @@ body {
 }
 
 body {
-  padding: 2em;
+  font-family: sans-serif;
+  background-color: #61d4b2;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+p {
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-shadow: 2px 3px #356657;
+  margin: 0;
+}
+
+#title {
+  font-family: "Pacifico", cursive;
+  font-size: 6rem;
+  text-shadow: 3px 5px #356657;
+  margin: 0;
+  animation: upDown 3s ease-in-out infinite;
 }
 
 .screensaver {
@@ -41,6 +66,10 @@ body {
   animation: moveGradient 10s ease infinite;
 }
 
+.hidden {
+  display: none;
+}
+
 @keyframes moveGradient {
   0% {
     background-position: top left;
@@ -50,6 +79,8 @@ body {
   }
 }
 
-.hidden {
-  display: none;
+@keyframes upDown {
+  50% {
+    transform: translateY(-10%);
+  }
 }
