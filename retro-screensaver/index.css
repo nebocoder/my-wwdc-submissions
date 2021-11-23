@@ -6,7 +6,7 @@ body {
 
 body {
   font-family: sans-serif;
-  background-color: #61d4b2;
+  background-color: #25a780;
 }
 
 main {
@@ -48,10 +48,11 @@ p {
 .orb {
   height: 250px;
   width: 250px;
-  border-radius: 50%;
+  border-radius: 25%;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: 0px 0px 300px white;
   background: #c7b9ff;
   background: linear-gradient(
     -45deg,
@@ -63,7 +64,7 @@ p {
     #fffad1
   );
   background-size: 300% 1500%;
-  animation: moveGradient 10s ease infinite;
+  animation: moveGradient 10s ease infinite, rotate 46s linear infinite;
 }
 
 .hidden {
@@ -76,6 +77,12 @@ p {
   }
   50% {
     background-position: right bottom;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
   }
 }
 
