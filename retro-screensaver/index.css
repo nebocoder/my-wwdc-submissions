@@ -1,0 +1,93 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #25a780;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+p {
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-shadow: 2px 3px #356657;
+  margin: 0;
+}
+
+#title {
+  font-family: "Pacifico", cursive;
+  font-size: 6rem;
+  text-shadow: 3px 5px #356657;
+  margin: 0;
+  animation: upDown 3s ease-in-out infinite;
+}
+
+.screensaver {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+.orb {
+  height: 250px;
+  width: 250px;
+  border-radius: 25%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: 0px 0px 300px white;
+  background: #c7b9ff;
+  background: linear-gradient(
+    -45deg,
+    #aad1b6,
+    #b5caf9,
+    #c7b9ff,
+    #f0b9dd,
+    #f3bf99,
+    #fffad1
+  );
+  background-size: 300% 1500%;
+  animation: moveGradient 10s ease infinite, rotate 46s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: top left;
+  }
+  50% {
+    background-position: right bottom;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes upDown {
+  50% {
+    transform: translateY(-10%);
+  }
+}
