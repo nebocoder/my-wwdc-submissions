@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", countdown)
 document.addEventListener("mousemove", endScreensaver)
 
 function countdown() {
-  screensaver = setInterval(startScreensaver, 10000)
+  let screensaver = setInterval(startScreensaver, 10000)
 }
 
 function startScreensaver() {
