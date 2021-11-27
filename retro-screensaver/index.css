@@ -23,6 +23,7 @@ p {
   font-size: 1.25rem;
   text-shadow: 2px 3px #356657;
   margin: 0;
+  cursor: default;
 }
 
 #title {
@@ -31,6 +32,7 @@ p {
   text-shadow: 3px 5px #356657;
   margin: 0;
   animation: upDown 3s ease-in-out infinite;
+  cursor: default;
 }
 
 .screensaver {
