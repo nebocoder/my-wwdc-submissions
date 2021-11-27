@@ -15,7 +15,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #ece7ff;
 }
 
 p {
@@ -23,6 +23,7 @@ p {
   font-size: 1.25rem;
   text-shadow: 2px 3px #356657;
   margin: 0;
+  cursor: default;
 }
 
 #title {
@@ -31,6 +32,7 @@ p {
   text-shadow: 3px 5px #356657;
   margin: 0;
   animation: upDown 3s ease-in-out infinite;
+  cursor: default;
 }
 
 .screensaver {
@@ -48,11 +50,8 @@ p {
 .orb {
   height: 250px;
   width: 250px;
-  border-radius: 25%;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  box-shadow: 0px 0px 300px white;
+  border-radius: 30% 70%;
+  box-shadow: 0px 0px 45px #c7b9ff;
   background: #c7b9ff;
   background: linear-gradient(
     -45deg,
