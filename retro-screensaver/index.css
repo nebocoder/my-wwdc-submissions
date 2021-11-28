@@ -63,11 +63,13 @@ p {
     #fffad1
   );
   background-size: 300% 1500%;
-  animation: moveGradient 10s ease infinite, rotate 46s linear infinite;
+  animation: moveGradient 10s ease infinite,
+    rotate-clockwise 46s linear infinite;
 }
 
-#orb1 {
-  animation: moveGradient 10s ease infinite, rotate1 46s linear infinite;
+#orb-right {
+  animation: moveGradient 10s ease infinite,
+    rotate-counterclockwise 46s linear infinite;
 }
 
 .hidden {
@@ -83,13 +85,13 @@ p {
   }
 }
 
-@keyframes rotate {
+@keyframes rotate-clockwise {
   100% {
     transform: rotate(360deg);
   }
 }
 
-@keyframes rotate1 {
+@keyframes rotate-counterclockwise {
   100% {
     transform: rotate(-360deg);
   }
